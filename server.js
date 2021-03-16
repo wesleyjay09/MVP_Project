@@ -8,7 +8,7 @@ app.use(express.static('public'))
 app.get('/api/student', async (req, res) => {
     try {
         
-        const result = await pool.query("SELECT * FROM student") 
+        const result = await pool.query("SELECT * FROM task") 
         res.json(result.rows);
        
     } catch (err) {
