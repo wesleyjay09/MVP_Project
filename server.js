@@ -2,8 +2,10 @@ require('dotenv').config()
 const express = require('express');
 const app = express();
 const pool = require('./db_configuration');
+const cors = require("cors")
 
 app.use(express.static('public'))
+app.use(cors())
 
 app.get('/api/task', async (req, res) => {
     try {
