@@ -1,9 +1,9 @@
-const btn = document.getElementById("button")
+
 const container = document.querySelector(".container")
-console.log(btn)
 
 
-document.addEventListener("click",  async ()=>{
+
+const get = async ()=>{
     fetch('https://quiet-basin-82276.herokuapp.com/api/task')
     .then(async(result)=> {
         let text = await result.text();
@@ -13,14 +13,12 @@ document.addEventListener("click",  async ()=>{
 
 submit.addEventListener("click",  async ()=>{
     fetch('https://quiet-basin-82276.herokuapp.com/api/task', {
-        method: 'POST', 
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-        })
+        method: 'POST' 
+       })
         .then(async(result)=> {
         let text = await result.text();
         container.innerHTML = text;
         })
 })
+
+get()
