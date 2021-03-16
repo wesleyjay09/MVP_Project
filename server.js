@@ -7,14 +7,21 @@ app.use(express.static('public'))
 
 app.get('/api/task', async (req, res) => {
     try {
-        
         const result = await pool.query("SELECT * FROM task") 
         res.json(result.rows);
         res.send("working")
-       
     } catch (err) {
         console.error(err.message)
         res.end('error')
+    }
+});
+
+app.get('api/task/:id', async (req, res) => {
+        const {id} = req.params
+    try {
+        const selectTask
+    } catch (error) {
+        
     }
 })
 
