@@ -5,11 +5,12 @@ const pool = require('./db_configuration');
 
 app.use(express.static('public'))
 
-app.get('/api/student', async (req, res) => {
+app.get('/api/task', async (req, res) => {
     try {
         
         const result = await pool.query("SELECT * FROM task") 
         res.json(result.rows);
+        res.send("working")
        
     } catch (err) {
         console.error(err.message)
