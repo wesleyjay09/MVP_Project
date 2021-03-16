@@ -5,3 +5,4 @@ CREATE TABLE task (
     task text,
     satus boolean NOT NULL
 );\
+
