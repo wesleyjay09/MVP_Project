@@ -16,14 +16,14 @@ app.get('/api/task', async (req, res) => {
     }
 });
 
-app.get('api/task/:id', async (req, res) => {
-        const {id} = req.params
-    try {
-        const selectTask
-    } catch (error) {
+// app.get('api/task/:id', async (req, res) => {
+//         const {id} = req.params
+//     try {
+//         const selectTask
+//     } catch (error) {
         
-    }
-})
+//     }
+// })
 
 
 app.listen(process.env.PORT, () => {
