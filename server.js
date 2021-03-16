@@ -4,14 +4,29 @@ const app = express();
 const pool = require('./db_configuration');
 const cors = require("cors")
 
+//middlewares
 app.use(express.static('public'))
 app.use(cors())
+
+//routes
+app.post('/api/task', async (req, res) => {
+    const {task, satus} = req.body
+    try {
+        const result = await pool.query("INSERT INTO task VALUES (task) ($1)",[task])
+        res.json(result.rows)
+    } catch (err) {
+        console.error(err.message)
+        
+    }
+
+})
+
 
 app.get('/api/task', async (req, res) => {
     try {
         const result = await pool.query("SELECT * FROM task") 
         res.json(result.rows);
-        res.send("working")
+        
     } catch (err) {
         console.error(err.message)
         res.end('error')
