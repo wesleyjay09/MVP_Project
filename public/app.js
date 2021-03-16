@@ -8,7 +8,7 @@ const get = async ()=>{
     .then(async(result)=> {
         let text = await result.text();
         console.log(text)
-        container.innerHTML = text[1].task;
+        container.innerHTML = text[0].task;
         
     })
 }
