@@ -6,3 +6,6 @@ CREATE TABLE task (
     satus boolean NOT NULL
 );\
 
+git add .
+git commit -m "update"
+git push heroku main
