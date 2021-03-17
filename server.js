@@ -16,13 +16,12 @@ app.post('/api/task/:id', async (req, res) => {
     const {task} = req.body
     const {id} = req.params
     try {
-        const result = await pool.query(`INSERT INTO task VALUES ${id}`,[task])
+        const result = await pool.query(`INSERT INTO task ($1) VALUES ${id}`,[task])
         res.json(result.rows)
     } catch (err) {
         console.error(err.message)
         console.log('error')
     }
-
 })
 
 
@@ -30,7 +29,6 @@ app.get('/api/task', async (req, res) => {
     try {
         const result = await pool.query("SELECT * FROM task") 
         res.json(result.rows);
-        
     } catch (err) {
         console.error(err.message)
         res.end('error')
