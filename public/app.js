@@ -1,8 +1,8 @@
 
 const container = document.querySelector("#container")
 const input = document.querySelector("#input").value;
-const userInput = input;
 
+console.log(input)
 const get = async ()=>{
     fetch('https://quiet-basin-82276.herokuapp.com/api/task')
     .then(async(result)=> {
@@ -14,7 +14,8 @@ const get = async ()=>{
     })
 }
 
-submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, result )=>{
+submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${input}`, data = {})=>{
+    console.log(input)
    await fetch(url, {
         method: 'POST' ,
         headers:{'Content-Type': 'application/json;charset=utf-8'
