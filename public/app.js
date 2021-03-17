@@ -21,8 +21,10 @@ const post = () => {
         body:JSON.stringify({'task':`${userInput}`}),
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
-    .then(response => response.json()) 
-    .catch(err => err.message)
+    .then(async (result) => {
+        let text = await result.text()
+        container.innerHTML = text;
+    })
 
 
 }
