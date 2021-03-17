@@ -24,7 +24,7 @@ const post = () => {
     })
     .then(async (result) => {
         let text = await result.text()
-        container.innterHTML = text;\q
+        container.innterHTML = text;
     
     
     })
