@@ -14,7 +14,7 @@ const get = () => {
     .then(async(result)=> {
         let text = await result.text();
         console.log(JSON.parse(text))
-        container.innerHTML = text;
+        li.innerHTML = JSON.parse(text);
     
     })
 }
