@@ -13,7 +13,7 @@ const get = async ()=>{
     })
 }
 const post = async () => {
-    fetch(`https://quiet-basin-82276.herokuapp.com/api/task/${input}`,{
+    fetch(`https://quiet-basin-82276.herokuapp.com/api/task/`,{
     method: 'POST',  
     headers: {
         'Content-Type': 'application/json',
