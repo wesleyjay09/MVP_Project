@@ -8,7 +8,7 @@ const get = async ()=>{
     .then(async(result)=> {
         let text = await result.text();
         console.log(JSON.parse(text))
-        container.innerHTML = text[0].task;
+        container.innerHTML = text[0];
         
         
     })
