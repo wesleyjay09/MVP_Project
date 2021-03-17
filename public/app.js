@@ -33,7 +33,7 @@ const deleteTask = ()=> {
         headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({'task': `${userInput}`})
+          body: JSON.stringify({'id': `${userInput}`})
     })
 }
 
