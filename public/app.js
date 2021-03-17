@@ -1,6 +1,6 @@
 
 const container = document.querySelector("#container")
-const input = document.querySelector("#input").value;
+const input = document.querySelector("#input");
 const userInput = input;
 
 const get = async ()=>{
