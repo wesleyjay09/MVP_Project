@@ -28,8 +28,6 @@ submit.addEventListener("click",  async (url = `https://quiet-basin-82276.heroku
         container.innerHTML = text;
         })
 })
-        .catch(async(err)=>{
-             console.error(err.message)
-        });
+       
 
 get()
