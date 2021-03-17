@@ -13,7 +13,7 @@ app.use(cors())
 //routes
 app.post('/api/task/', async (req, res) => {
     console.log(req.body)
-    const input = req.body.task
+    const input = req.body
   
     try {
         const result = await pool.query(`INSERT INTO task (task) VALUES ($2) `, [input])
