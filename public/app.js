@@ -2,7 +2,7 @@
 const container = document.querySelector("#container")
 const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
-const userInput = input.value
+const userInput;
 const button = document.getElementById("button")
 
 
@@ -31,8 +31,9 @@ const post = () => {
 }
 
 
-
+ 
 
 
 submit.addEventListener("click", post())
- button.addEventListener("click", get())
+input.addEventListener("input", (e) => {userInput = e.target.value})
+button.addEventListener("click", get())
