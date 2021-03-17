@@ -22,8 +22,8 @@ submit.addEventListener("click",  async (url = `https://quiet-basin-82276.heroku
     body: JSON.stringify({test: 'working'})
        })
        
-        .then(async(res)=> {
-            return res.json()
+        .then(res => {
+           return res.json()
       
         })
         .then(data => console.log(data))
