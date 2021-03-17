@@ -5,14 +5,14 @@ const submit = document.querySelector("#submit")
 let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
+const list = document.getElementById("list")
 
 
 const get = async () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
         let text = await result.text();
-        
-        container.innerHTML = text;
+        list.innerHTML = text;
     })
 }
 
