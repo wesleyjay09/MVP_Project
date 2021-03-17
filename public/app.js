@@ -14,7 +14,7 @@ const get = async () => {
     .then(async(result)=> {
         let text = await result.text();
         li.textContent = `${text}`;
-        container.appendChild(list[0]);
+        list.appendChild(li);
     })
 }
 
