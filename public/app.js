@@ -19,7 +19,7 @@ submit.addEventListener("click",  async ()=>{
         method: 'POST' ,
         headers:{'Content-Type': 'application/json'
     },
-    body: JSON.stringify(result)
+    body: JSON.stringify(data)
        })
         .then(async(result)=> {
         let text = await result.text();
