@@ -6,14 +6,15 @@ let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
 const list = document.getElementById("list")
+const li = document.getElementsByClassName("task")
 
 
 const get = async () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
         let text = await result.text();
-        list.textContent = `${text}`;
-        container.appendChild(list);
+        li.textContent = `${text}`;
+        container.appendChild(list[0]);
     })
 }
 
