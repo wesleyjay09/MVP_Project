@@ -6,7 +6,7 @@ let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
 const list = document.querySelector("#list")
-const li = document.querySelector(".task")
+
 
 
 const get = () => {
@@ -14,7 +14,7 @@ const get = () => {
     .then(async(result)=> {
         let text = await result.text();
         console.log(JSON.parse(text))
-        li.innerHTML = JSON.parse(text);
+        list.innerHTML = JSON.stringify(text);
     
     })
 }
