@@ -9,12 +9,13 @@ app.use(express.static('public'))
 app.use(cors())
 
 //routes
-app.post('/api/task', async (req, res) => {
+app.post('/api/task/:id', async (req, res) => {
     const {task} = req.body
+    const {id} = req.params
     try {
-        const result = await pool.query("INSERT INTO task VALUES (task) ($1)",[task])
+        const result = await pool.query(`INSERT INTO task VALUES ${id}`,[task])
         res.json(result.rows)
-        console.log('woking')
+        console.log('working')
     } catch (err) {
         console.error(err.message)
     }
