@@ -12,7 +12,13 @@ const get = async () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
         let text = await result.text();
-        list.innerHTML = text;
+        $each(result.text, (key,value) => {
+            let task = text[0]
+            let taskList = $(`<li id="listItem">${task}</li>`)
+
+
+            list.apppend(taskList)
+        })
     })
 }
 
