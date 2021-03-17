@@ -6,7 +6,7 @@ let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
 const list = document.querySelector("#list")
-const li = document.querySelector("#task")
+const li = document.querySelector(".task")
 
 
 const get = () => {
