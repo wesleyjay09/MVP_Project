@@ -20,7 +20,7 @@ const post = () => {
         'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-    'task': `${input.value}`,
+    task: `${input.value}`,
   })
 })
 .then(async function (data) {  

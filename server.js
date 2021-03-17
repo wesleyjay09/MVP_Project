@@ -14,7 +14,7 @@ app.use(express.json())
 //routes
 app.post('/api/task', async (req, res) => {
     console.log(req.body)
-    const {tast, satus} = req.body
+    const {task, satus} = req.body
   
     try {
         const result = await pool.query(`INSERT INTO task (task) VALUES ($1, $2) `[task, satus])
