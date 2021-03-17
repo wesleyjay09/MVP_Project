@@ -13,7 +13,7 @@ const get = async ()=>{
         
     })
 }
-let result = { userinput}
+let result = { userInput}
 submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, result )=>{
    const response = await fetch(url, {
         method: 'POST' ,
