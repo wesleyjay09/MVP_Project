@@ -6,7 +6,7 @@ let userInput;
 const button = document.getElementById("button")
 
 
-console.log(userInput)
+
 const get = async () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
@@ -34,6 +34,7 @@ const post = () => {
  
 
 
-submit.addEventListener("click", post())
+submit.addEventListener("click", post)
 input.addEventListener("input", (e) => {userInput = e.target.value})
-button.addEventListener("click", get())
+console.log(userInput)
+button.addEventListener("click", get)
