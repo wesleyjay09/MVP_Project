@@ -13,18 +13,21 @@ const get = async ()=>{
         
     })
 }
-
-submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, data = {userInput})=>{
-   await fetch(url,  {
+let result = { userinput}
+submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, result )=>{
+   const response = await fetch(url, {
         method: 'POST' ,
-        headers:{'Content-Type': 'application/json'
+        headers:{'Content-Type': 'application/json;charset=utf-8'
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(result)
        })
+       
         .then(async(result)=> {
         let text = await result.text();
         container.innerHTML = text;
         })
 })
+
+
 
 get()
