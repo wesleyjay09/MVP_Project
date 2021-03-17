@@ -12,7 +12,7 @@ app.use(cors())
 app.use(express.json())
 
 //routes
-app.post('/api/task/', async (req, res) => {
+app.post('/api/task', async (req, res) => {
     console.log(req.body)
     const input = req.body.task
   

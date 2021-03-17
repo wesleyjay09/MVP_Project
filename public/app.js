@@ -13,8 +13,8 @@ const get = async ()=>{
         container.innerHTML = text;
     })
 }
-const post = async () => {
-  await fetch(`https://quiet-basin-82276.herokuapp.com/api/task/`,{
+const post = () => {
+    fetch(`https://quiet-basin-82276.herokuapp.com/api/task`,{
     method: 'POST',  
     headers: {
         'Content-Type': 'application/json',
@@ -23,8 +23,9 @@ const post = async () => {
     task: `${input.value}`,
   })
 })
-.then(function (data) {  
-  console.log('Request success: ', data);  
+.then(async function (data) {  
+    const text = await data.text();
+  console.log('Request success: ', text);  
 })  
 .catch(function (error) {  
   console.log('Request failure: ', error);  
