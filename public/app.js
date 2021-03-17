@@ -14,8 +14,8 @@ const get = async ()=>{
     })
 }
 
-submit.addEventListener("click",  async ()=>{
-    fetch(`https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, {
+submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, data = {userInput})=>{
+   await fetch(url,  {
         method: 'POST' ,
         headers:{'Content-Type': 'application/json'
     },
