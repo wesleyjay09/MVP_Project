@@ -9,6 +9,7 @@ const axios = require('axios')
 //middlewares
 app.use(express.static('public'))
 app.use(cors())
+app.use(express.json())
 
 //routes
 app.post('/api/task/', async (req, res) => {

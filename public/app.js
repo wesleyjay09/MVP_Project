@@ -28,7 +28,6 @@ const post = async () => {
 .catch(function (error) {  
   console.log('Request failure: ', error);  
 });
-
 }
 
 
