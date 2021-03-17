@@ -5,8 +5,8 @@ const submit = document.querySelector("#submit")
 let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
-const list = document.getElementById("list")
-const li = document.getElementsByClassName("task")
+const list = document.querySelector("#list")
+const li = document.querySelector("#task")
 
 
 const get = async () => {
