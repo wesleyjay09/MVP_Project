@@ -14,7 +14,7 @@ const get = async ()=>{
     })
 }
 const post = () => {
-    axios.post(`https://quiet-basin-82276.herokuapp.com/api/task/${input}`, {
+    axios.post(`https://quiet-basin-82276.herokuapp.com/api/task/`, {
    task: `${input}`
   })
   .then(function (response) {
