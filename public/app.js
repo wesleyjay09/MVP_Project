@@ -1,8 +1,9 @@
 
 const container = document.querySelector("#container")
-const input = document.querySelector("#input").value;
+const input = document.querySelector("#input");
 const submit = document.querySelector("#submit")
-console.log(input)
+
+console.log(input.value)
 
 const get = async ()=>{
     fetch('https://quiet-basin-82276.herokuapp.com/api/task')
@@ -18,9 +19,9 @@ const post = async () => {
     headers: {
         'Content-Type': 'application/json',
     },
-    body: {
-    task: `string`,
-  }
+    body: JSON.stringify({
+    task: `${input.value}`,
+  })
 })
 .then(function (data) {  
   console.log('Request success: ', data);  
