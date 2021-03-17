@@ -15,9 +15,9 @@ app.post('/api/task/:id', async (req, res) => {
     try {
         const result = await pool.query(`INSERT INTO task VALUES ${id}`,[task])
         res.json(result.rows)
-        console.log('working')
     } catch (err) {
         console.error(err.message)
+        console.log('error')
     }
 
 })
