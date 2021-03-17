@@ -4,6 +4,7 @@ const app = express();
 const pool = require('./db_configuration');
 const cors = require("cors")
 
+
 //middlewares
 app.use(express.static('public'))
 app.use(cors())
