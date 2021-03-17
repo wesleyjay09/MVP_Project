@@ -7,8 +7,10 @@ const get = async ()=>{
     fetch('https://quiet-basin-82276.herokuapp.com/api/task')
     .then(async(result)=> {
         let text = await result.text();
-        console.log(text.task)
-        container.innerHTML = text[0];
+        for(let i = 0; i < text.length; i++){
+        console.log(text[i])
+        container.innerHTML = text[i];
+        }
         
     })
 }
