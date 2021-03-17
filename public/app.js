@@ -9,10 +9,11 @@ const list = document.querySelector("#list")
 const li = document.querySelector("#task")
 
 
-const get = async () => {
+const get = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
         let text = await result.text();
+        console.log(text[0])
         li.textContent = `${text}`;
         list.appendChild(li);
     })
