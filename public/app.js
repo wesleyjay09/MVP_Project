@@ -13,20 +13,27 @@ const get = async ()=>{
         
     })
 }
-const post = () => {
-    axios.post(`/api/task`, {
-   task: `${input}`
+const post = async () => {
+    fetch('https://quiet-basin-82276.herokuapp.com/api/task',{
+
+ {  
+    method: 'POST',  
+     
+    body: JSON.stringify({
+    task: `${input}`,
   })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+})
+.then(function (data) {  
+  console.log('Request success: ', data);  
+})  
+.catch(function (error) {  
+  console.log('Request failure: ', error);  
+});
+
 }
 
 
-submit.addEventListener("click", post())
+submit.addEventListener("click", post)
 
 
 get()
