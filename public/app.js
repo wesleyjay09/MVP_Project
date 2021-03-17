@@ -1,6 +1,6 @@
 
 const container = document.querySelector("#container")
-const input = document.querySelector("#input");
+const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
 const userInput = input.value
 
