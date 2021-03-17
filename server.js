@@ -34,8 +34,14 @@ app.post('/api/todo', async (req, res) => {
     }
 })
 
-
-
+app.delete('/api/todo/:id', async (req, res) => {
+    let {id} = req.params
+    try {
+        const deleteTask =await pool.query('DELETE FROM todo WHERE id = $1', [id])
+    } catch (err) {
+        console.error(err.message)
+    }
+})
 
 app.listen(process.env.PORT, () => {
     console.log(`listening on Port ${process.env.PORT}`);

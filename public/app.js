@@ -4,7 +4,7 @@ const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
 let userInput;
 const button = document.getElementById("button")
-
+const deleteBtn = document.getElementById("delete")
 
 
 const get = async () => {
@@ -24,9 +24,16 @@ const post = () => {
     })
     .then(async (result) => {
         let text = await result.text()
-        container.innterHTML = text;
-    
-    
+    })
+}
+
+const deleteTask = ()=> {
+    fetch('https://quiet-basin-82276.herokuapp.com/api/todo',{
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({'task': `${userInput}`})
     })
 }
 
@@ -36,5 +43,5 @@ const post = () => {
 
 submit.addEventListener("click", post)
 input.addEventListener("input", (e) => {userInput = e.target.value})
-console.log(userInput)
 button.addEventListener("click", get)
+deleteBtn.addEventListener("click", deleteTask)
