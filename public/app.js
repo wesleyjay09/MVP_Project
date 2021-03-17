@@ -23,10 +23,8 @@ const post = () => {
     })
     .then(async (result) => {
         let text = await result.text()
-        container.innerHTML = text;
+    console.log(text);
     })
-
-
 }
 
 
