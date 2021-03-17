@@ -15,7 +15,7 @@ app.use(express.json())
 
 app.get('/api/todo', async (req, res) => {
     try {
-        const result = await pool.query("SELECT * FROM task") 
+        const result = await pool.query("SELECT * FROM todo") 
         res.json(result.rows);
     } catch (err) {
         console.error(err.message)
