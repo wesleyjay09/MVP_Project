@@ -10,13 +10,13 @@ app.use(cors())
 
 //routes
 app.post('/api/task', async (req, res) => {
-    const {task, satus} = req.body
+    const {task} = req.body
     try {
         const result = await pool.query("INSERT INTO task VALUES (task) ($1)",[task])
         res.json(result.rows)
+        console.log('woking')
     } catch (err) {
         console.error(err.message)
-        
     }
 
 })
