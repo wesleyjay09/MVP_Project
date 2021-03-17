@@ -18,9 +18,9 @@ const post = async () => {
     headers: {
         'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
+    body: {
     task: `string`,
-  })
+  }
 })
 .then(function (data) {  
   console.log('Request success: ', data);  
