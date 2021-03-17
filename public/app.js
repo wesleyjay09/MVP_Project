@@ -2,7 +2,7 @@
 const container = document.querySelector("#container")
 const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
-const userInput;
+let userInput;
 const button = document.getElementById("button")
 
 
