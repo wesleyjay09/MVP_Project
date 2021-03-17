@@ -12,6 +12,7 @@ app.use(cors())
 
 //routes
 app.post('/api/task/:id', async (req, res) => {
+    console.log(req.body)
     const {task} = req.body
     const {id} = req.params
     try {
@@ -49,5 +50,6 @@ app.get('/api/task', async (req, res) => {
 app.listen(process.env.PORT, () => {
     console.log(`listening on Port ${process.env.PORT}`);
 })
+
 
 
