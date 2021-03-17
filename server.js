@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const pool = require('./db_configuration');
 const cors = require("cors")
+const axios = require('axios')
 
 
 //middlewares
@@ -50,3 +51,4 @@ app.listen(process.env.PORT, () => {
 })
 
 
+module.exports = axios;
