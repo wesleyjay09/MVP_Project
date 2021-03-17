@@ -12,18 +12,6 @@ app.use(cors())
 app.use(express.json())
 
 //routes
-app.post('/api/task', async (req, res) => {
-   console.log(req.body)
-    const {task, satus} = req.body
-  
-    try {
-        const result = await pool.query(`INSERT INTO task (task) VALUES ($1, $2) `[task, satus])
-        res.json(result.rows)
-    } catch (err) {
-        console.error(err.message)
-    }
-})
-
 
 app.get('/api/task', async (req, res) => {
     try {
@@ -35,14 +23,7 @@ app.get('/api/task', async (req, res) => {
     }
 });
 
-// app.get('api/task/:id', async (req, res) => {
-//         const {id} = req.params
-//     try {
-//         const selectTask
-//     } catch (error) {
-        
-//     }
-// })
+
 
 
 app.listen(process.env.PORT, () => {

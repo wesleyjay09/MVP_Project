@@ -13,27 +13,10 @@ const get = async ()=>{
         container.innerHTML = text;
     })
 }
-const post = () => {
-    fetch(`https://quiet-basin-82276.herokuapp.com/api/task`,{
-    method: 'POST',  
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-    'task': `${input.value}`
-  })
-})
-.then(async function (data) {  
-    const text = await data.text();
-  console.log('Request success: ', text);  
-})  
-.catch(function (error) {  
-  console.log('Request failure: ', error);  
-});
-}
 
 
-submit.addEventListener("click", post)
+
+
 
 
 get()
