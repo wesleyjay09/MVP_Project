@@ -26,7 +26,7 @@ app.get('/api/task', async (req, res) => {
 app.post('/api/task', async (req, res) => {
     try {
         const {task} = req.body;
-        const newTask = await pool.query("INSERT INTO task (task) VALUES ($1)", [task])
+        const newTask = await pool.query("INSERT INTO task(task) VALUES($1)",[task])
         res.json(newTask.rows);
         } catch (err) {
         console.error(err.message)
