@@ -2,6 +2,7 @@
 const container = document.querySelector("#container")
 const input = document.querySelector("#input");
 const submit = document.querySelector("#submit")
+const userInput = input.value
 
 
 
@@ -17,7 +18,7 @@ const get = async () => {
 const post = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/task', {
         method: 'POST',
-        body: (input.value),
+        body:JSON.stringify({'task':`${userInput}`}),
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
     .then(response => response.json()) 
