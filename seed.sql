@@ -1,10 +1,10 @@
 CREATE DATABASE list ;
 
-CREATE TABLE task (
+CREATE TABLE todo (
     id SERIAL NOT NULL,
     task text
 );
-INSERT INTO task (task) VALUES ('test');
+INSERT INTO todo(task) VALUES ('test');
 git add .
 git commit -m "update"
 git push heroku main

@@ -13,7 +13,7 @@ app.use(express.json())
 
 //routes
 
-app.get('/api/task', async (req, res) => {
+app.get('/api/todo', async (req, res) => {
     try {
         const result = await pool.query("SELECT * FROM task") 
         res.json(result.rows);
@@ -23,11 +23,11 @@ app.get('/api/task', async (req, res) => {
     }
 });
 
-app.post('/api/task', async (req, res) => {
+app.post('/api/todo', async (req, res) => {
     try {
         const {task} = req.body;
-        const newTask = await pool.query("INSERT INTO task(task) VALUES($1)",[task])
-        res.json(newTask.rows);
+        const newTask = await pool.query("INSERT INTO todo(task) VALUES($1)",[task])
+        res.json(task);
         } catch (err) {
         console.error(err.message)
         
