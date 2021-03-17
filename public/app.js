@@ -2,7 +2,7 @@
 const container = document.querySelector("#container")
 const input = document.querySelector("#input").value;
 const userInput = input;
-const axios = require("./server.js")
+
 const get = async ()=>{
     fetch('https://quiet-basin-82276.herokuapp.com/api/task')
     .then(async(result)=> {
@@ -13,36 +13,24 @@ const get = async ()=>{
         
     })
 }
-// let result = { userInput}
-// submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, result )=>{
-//    await fetch(url, {
-//         method: 'POST' ,
-//         headers:{'Content-Type': 'application/json;charset=utf-8'
-//     },
-//     body: JSON.stringify(result)
-//        })
+
+submit.addEventListener("click",  async (url = `https://quiet-basin-82276.herokuapp.com/api/task/${userInput}`, result )=>{
+   await fetch(url, {
+        method: 'POST' ,
+        headers:{'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify({test: 'working'})
+       })
        
-//         .then(async(result)=> {
-//             console.log(result)
-//         let text = await result.text();
-//         container.innerHTML = text;
-//         })
-// })
+        .then(async(res)=> {
+            return res.json()
+      
+        })
+        .then(data => console.log(data))
+})
 
 
 
 
-async function makeGetRequest() {
-
-    let payload = { userInput };
-
-    let res = await axios.post('http://httpbin.org/post', payload);
-
-    let data = res.data;
-    console.log(data);
-}
-
-submit.addEventListener("click",makeGetRequest())
-       
 
 get()
