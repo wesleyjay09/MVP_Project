@@ -33,4 +33,4 @@ const post = () => {
 
 
 submit.addEventListener("click", post())
- buton.addEventListener("click", get())
+ button.addEventListener("click", get())
