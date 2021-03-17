@@ -17,7 +17,7 @@ const get = () => {
         // var li = document.createElement('li');
         // li.textContent = text;
         // list.appendChild(li);
-   console.log(JSONparse(text))
+   console.log(JSON.parse(text))
     
     })
 }
