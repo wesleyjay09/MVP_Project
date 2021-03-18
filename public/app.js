@@ -49,7 +49,7 @@ const post = () => {
 }
 
 const deleteTask = ()=> {
-    if(document.getElementById("checked").checked = true) {
+    if(document.getElementById("checked").checked === true) {
         fetch('https://quiet-basin-82276.herokuapp.com/api/todo',{
         method: 'DELETE',
         headers: {
@@ -64,7 +64,7 @@ const deleteTask = ()=> {
 
 
  
-
+console.log(document.getElementById("checked"))
 
 submit.addEventListener("click", post)
 submit.addEventListener("click", get)
