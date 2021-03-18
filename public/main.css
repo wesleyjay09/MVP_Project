@@ -19,7 +19,7 @@
     width:20wh;
     height: 20vh;
     color: #fff;
-    background-color: #5995DA;  
+    background-color: #0b3c5d;  
     padding: 20px 0;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
 #listContainer{
 width:20wh;
 color: #fff;
-background-color: #3bad78;  
+background-color: #d98310;  
 padding: 20px 0;
 display: flex;
 justify-content: center;
@@ -36,14 +36,16 @@ flex-direction: column;
 }
 
 #task {
+    width: 40%;
     display: flex;
     justify-content: center;
     border-radius: 8% white solid;
     justify-content: space-between;
+    background-color: #328cc1;
 }
 
 #submit{
-    
+    width:10%;
     display: flex;
     justify-content: center;
     font-size: 1rem;
@@ -52,10 +54,14 @@ flex-direction: column;
     
 } 
 
-#delete{
+#update{
+    width:3%
     display: flex;
     justify-content: center;
     font-size: 1rem;
     font-family: 'Syne Mono', monospace;
     border-radius: 5%;
-}
+    
+} 
+
+
