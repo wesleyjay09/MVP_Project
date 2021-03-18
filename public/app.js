@@ -49,14 +49,21 @@ const post = () => {
 }
 
 const deleteTask = ()=> {
-    if(check.checked == true) {
+    while(check.checked === true) {
         fetch('https://quiet-basin-82276.herokuapp.com/api/todo',{
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({'id': `${userInput}`})
+          }
+          
+          
     })
+    check.checked === false
+    
+
+}
+
+
 }
 
 }
