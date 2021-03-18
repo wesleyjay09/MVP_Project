@@ -6,6 +6,7 @@ let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
 const listDisplay = $('<div></div>')
+listDisplay.append(body)
 
 
 
