@@ -29,9 +29,9 @@ const get = () => {
                 deleteTask()
                 })
        
-            check.innerHTML = text[i].task
-            check.appendChild(task); 
-            listContainer.appendChild(check)
+            task.innerHTML = text[i].task
+             
+            listContainer.appendChild(check).appendChild(task)
         }
     })
 }

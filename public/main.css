@@ -6,7 +6,7 @@
 
 
 
-/* #header{
+ /* #header{
     padding: 1%;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
+} */
 #listContainer{
 width:20wh;
 color: #fff;
@@ -41,7 +41,7 @@ flex-direction: column;
     background-color: #328cc1;
 }
 
-#submit{
+/* #submit{
     width:10%;
     display: flex;
     justify-content: center;
@@ -69,4 +69,4 @@ flex-direction: column;
     border-radius: 5%;
 } 
 
- */
+ 
