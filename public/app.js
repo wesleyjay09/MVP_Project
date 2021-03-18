@@ -22,8 +22,9 @@ const get = () => {
             check.setAttribute("type", "checkbox");
             task.innerHTML = text[i].id
             task.innerHTML = text[i].task
-            task.appendChild(check); 
-            listContainer.appendChild(task)
+            check.appendChild(task); 
+            listContainer.appendChild(check)
+            console.log(text)
         }
         
         
