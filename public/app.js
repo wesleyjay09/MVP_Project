@@ -2,11 +2,10 @@
 const container = document.getElementById("container")
 const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
-let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
-const listDisplay = $('<div></div>')
-listDisplay.append(container)
+let userInput;
+
 
 
 
@@ -16,9 +15,16 @@ const get = () => {
     .then(async(result)=> {
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
-            let checkBox = $(`<input type="checkbox>`)
-            let label = $(`<label for="${checkBox}">${text[i].id} ${text[i].task}</label><br><br></br>`)
-            listDisplay.append(label).append(checkBox) 
+            let task = document.createElement("div")
+            let check = docuemnt.createElement("input")
+            check.setAttribute("type", "checkbox");
+            task.innerHTML = text[i].id
+            task.innerHTML = text[i].task
+            task.appendChild(check); 
+            container.appendChild(task)
+
+
+            
         }
         
         
