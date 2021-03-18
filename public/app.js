@@ -18,20 +18,21 @@ const get = () => {
             listContainer.removeChild(listContainer.firstChild)};
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
-            let task = document.createElement("div")
-            task.setAttribute("id", "task")
             let check = document.createElement("input")
             check.setAttribute("type", "checkbox");
             check.setAttribute("id",`${text[i].id}`)
             check.addEventListener("click", (e) =>{
+            let task = document.createElement("div")
+            task.setAttribute("id", "task")
+            
                 console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
        
             task.innerHTML = text[i].task
-            task.appendChild(check); 
-            listContainer.appendChild(task)
+            check.appendChild(task); 
+            listContainer.appendChild(check)
         }
     })
 }
