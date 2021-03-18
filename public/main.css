@@ -11,13 +11,10 @@
     display: flex;
     justify-content: center;
     font-size: 91px;
-  
-
 }
 
 #container{
-    width:20wh;
-    height: 20vh;
+    width:50%;
     color: #fff;
     background-color: #0b3c5d;  
     padding: 20px 0;
@@ -53,15 +50,23 @@ flex-direction: column;
     border-radius: 5%;
     
 } 
-
-#update{
-    width:3%
+#button{
+    width:10%;
     display: flex;
     justify-content: center;
     font-size: 1rem;
     font-family: 'Syne Mono', monospace;
     border-radius: 5%;
     
+} 
+
+#update{
+    width:3%;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: 'Syne Mono', monospace;
+    border-radius: 5%;
 } 
 
 
