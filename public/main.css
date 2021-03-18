@@ -23,7 +23,8 @@
     flex-direction: column;
 }  */
 #listContainer{
-margin: 50%;
+position: relative;
+margin-left: 50%;
 width:40%;
 color: #fff;
 background-color: #d98310;  
@@ -44,7 +45,7 @@ flex-direction: column;
 
 #input{
     width: 30%;
-    border-radius:8%;
+    border-radius:8% 8%;
 }
  #submit{
     width:10%;
