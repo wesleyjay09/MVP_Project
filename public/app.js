@@ -10,10 +10,6 @@ check.setAttribute("type", "checkbox");
 let userInput;
 let deleteInput;
 
-
-
-
-
 const get = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
@@ -38,6 +34,8 @@ const get = () => {
         }
     })
 }
+
+
 
 const post = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo', {
