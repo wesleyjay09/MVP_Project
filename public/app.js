@@ -22,9 +22,6 @@ const get = () => {
             task.innerHTML = text[i].task
             task.appendChild(check); 
             container.appendChild(task)
-
-
-            
         }
         
         
