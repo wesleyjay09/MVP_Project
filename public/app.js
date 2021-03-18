@@ -8,7 +8,7 @@ let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
 check.setAttribute("type", "checkbox");
 let userInput;
-let input;
+let deleteInput;
 
 
 
@@ -47,11 +47,13 @@ const post = () => {
     .then(async (result) => {
         let text = await result.text()
     })
+}
 
-let input;
+
 check.addEventListener("click", (e) =>{
-     input = e.target.id
+    deleteInput = e.target.id
      deleteTask()
+     console.log(e.target)
  })
 const deleteTask = ()=> {
     
