@@ -16,7 +16,7 @@ const get = () => {
         for(let i = 0; i < text.length; i++) {
             let task = document.createElement("li")
             task.innerHTML = text[i].task
-            document.container.appendChild(task)     
+            document.body.appendChild(task)     
 
         }
         
