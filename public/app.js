@@ -36,11 +36,7 @@ const get = () => {
             task.appendChild(check); 
             listContainer.appendChild(task)
         }
-        
-        
-        
     })
-
 }
 
 const post = () => {
@@ -57,12 +53,9 @@ const post = () => {
 
 
 const deleteTask = ()=> {
-    
         fetch(`https://quiet-basin-82276.herokuapp.com/api/todo/:${deleteInput}`,{
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
-          }
+        method: 'DELETE'
+        
         })
 }
 

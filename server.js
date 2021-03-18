@@ -35,6 +35,7 @@ app.post('/api/todo', async (req, res) => {
 })
 
 app.delete('/api/todo/:id', async (req, res) => {
+    console.log("working")
     try {
         const {id} = req.params;
         const deleteTask = await pool.query('DELETE FROM todo WHERE id = ($1)',[id])
