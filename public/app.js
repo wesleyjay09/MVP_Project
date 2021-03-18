@@ -1,5 +1,5 @@
 
-const container = document.getElementById("container")
+const listContainer = document.getElementById("listContainer")
 const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
 const button = document.getElementById("button")
@@ -22,7 +22,7 @@ const get = () => {
             task.innerHTML = text[i].id
             task.innerHTML = text[i].task
             task.appendChild(check); 
-            container.appendChild(task)
+            listContainer.appendChild(task)
         }
         
         

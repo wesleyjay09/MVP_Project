@@ -23,6 +23,15 @@
     justify-content: center;
     flex-direction: column;
 }
+#listContainer{
+width:20wh;
+color: #fff;
+background-color: #5995DA;  /* Blue */
+padding: 20px 0;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
 
 #task {
     display: flex;
