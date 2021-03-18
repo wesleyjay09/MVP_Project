@@ -1,5 +1,5 @@
 
-const container = document.querySelector("#container")
+const container = document.getElementById("container")
 const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
 let userInput;
