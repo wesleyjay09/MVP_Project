@@ -31,7 +31,8 @@ const get = () => {
        
             task.innerHTML = text[i].task
              
-            listContainer.appendChild(check).appendChild(task)
+            listContainer.appendChild(task)
+            listContainer.appendChild(check)
         }
     })
 }
