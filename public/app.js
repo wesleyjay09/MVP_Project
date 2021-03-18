@@ -8,6 +8,7 @@ let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
 check.setAttribute("type", "checkbox");
 let userInput;
+let input;
 
 
 
@@ -30,7 +31,7 @@ const get = () => {
             listContainer.appendChild(task)
             
         }
-        console.log(text[6].id)
+        
         
         
     })
@@ -46,11 +47,15 @@ const post = () => {
     .then(async (result) => {
         let text = await result.text()
     })
-}
 
+let input;
+check.addEventListener("click", (e) =>{
+     input = e.target.id
+     deleteTask()
+ })
 const deleteTask = ()=> {
-    while(check.checked === true) {
-        fetch('https://quiet-basin-82276.herokuapp.com/api/todo',{
+    
+        fetch(`https://quiet-basin-82276.herokuapp.com/api/todo/:${input}`,{
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -58,8 +63,8 @@ const deleteTask = ()=> {
           
           
     })
-    check.checked === false
-}
+    
+
 }
 
 
