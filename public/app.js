@@ -5,6 +5,7 @@ const submit = document.querySelector("#submit")
 let userInput;
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
+const listDisplay = $('<div></div>')
 
 
 
@@ -16,9 +17,9 @@ const get = () => {
         for(let i = 0; i < text.length; i++) {
             let checkBox = $(`<input type="checkbox>`)
             let label = $(`<label for="${checkBox}">${text[i].id} ${text[i].task}</label><br><br></br>`)
-            label.append(checkBox).append(body) 
+            listDisplay.append(label).append(checkBox) 
         }
-        console.log(container)
+        
         
     })
 
