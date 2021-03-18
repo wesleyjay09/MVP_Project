@@ -17,7 +17,7 @@ const get = () => {
         // var li = document.createElement('li');
         // li.textContent = text;
         // list.appendChild(li);
-   console.log(text[10])
+   console.log(text[10].task)
     
     })
 }
