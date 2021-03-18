@@ -36,7 +36,7 @@ flex-direction: column;
 }
 
 #task {
-    position:absolute;
+    position:relative;
     margin: 50%;
     width: 40%;
     display: flex;
