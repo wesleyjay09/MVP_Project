@@ -53,7 +53,7 @@ const post = () => {
 
 
 const deleteTask = ()=> {
-        fetch(`https://quiet-basin-82276.herokuapp.com/api/todo/:${deleteInput}`,{
+        fetch(`https://quiet-basin-82276.herokuapp.com/api/todo/${deleteInput}`,{
         method: 'DELETE'
         
         })
