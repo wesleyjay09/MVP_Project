@@ -35,13 +35,23 @@ app.post('/api/todo', async (req, res) => {
 })
 
 app.delete('/api/todo/:id', async (req, res) => {
-    console.log("working")
     try {
         const {id} = req.params;
         const deleteTask = await pool.query('DELETE FROM todo WHERE id = ($1)',[id])
     } catch (err) {
         console.error(err.message)
     }
+})
+
+app.put('/api/todo/:id', async (req, res) => {
+    try {
+        const {id} = req.params;
+        const {task} = req.body
+        const updateTask = await pool.query('UPDATE todo SET task = ($10) WHERE id = ($2)', [task, id])
+    } catch (err) {
+        console.error(err.message)
+    }
+
 })
 
 app.listen(process.env.PORT, () => {

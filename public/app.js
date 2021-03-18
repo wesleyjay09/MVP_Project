@@ -48,14 +48,23 @@ const post = () => {
     })
 }
 
-
-
 const deleteTask = ()=> {
         fetch(`https://quiet-basin-82276.herokuapp.com/api/todo/${deleteInput}`,{
         method: 'DELETE'
-        
         })
 }
+
+const put = () => {
+    fetch(`https://quiet-basin-82276.herokuapp.com/api/todo/${userInput}`, {
+        method: 'PUT', 
+        headers: {
+         'Content-type': 'application/json; charset=UTF-8'  
+        },
+        body: JSON.stringify({task:`${userInput}`}) 
+       })
+
+}
+
 
 
 
