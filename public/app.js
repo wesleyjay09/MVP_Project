@@ -16,6 +16,7 @@ const get = () => {
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
             let task = document.createElement("div")
+            task.setAttribute("id", "task")
             let check = document.createElement("input")
             check.setAttribute("type", "checkbox");
             task.innerHTML = text[i].id

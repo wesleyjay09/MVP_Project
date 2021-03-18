@@ -15,10 +15,16 @@
 }
 
 #container{
-    width: 100wh;
-    height: 100vh;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#task {
     display: flex;
     justify-content: center;
+    border: 1px black solid;
 }
 
 #submit{
