@@ -24,7 +24,7 @@ const get = () => {
        
             task.innerHTML = text[i].task
             task.appendChild(check); 
-            listContainer.appendChild(check)
+            listContainer.appendChild(task)
             console.log(text)
         }
         
