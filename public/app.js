@@ -14,10 +14,9 @@ const get = () => {
     .then(async(result)=> {
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
-            let task = document.createElement("div")
-            task.innerHTML = text[i].task
-            document.body.appendChild(task)     
-
+            let checkBox = $(`<input type="checkbox>`)
+            let label = $(`<label for="${checkBox}">${text[i].id} ${text[i].task}</label><br><br></br>`)
+            $(label).append(checkBox).append(container)   
         }
         
     })
