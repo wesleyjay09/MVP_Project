@@ -12,7 +12,7 @@
     justify-content: center;
     font-size: 91px;
 }
-
+/* 
 #container{
     width:50%;
     color: #fff;
@@ -21,8 +21,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-} 
+}  */
 #listContainer{
+margin: 50%;
 width:40%;
 color: #fff;
 background-color: #d98310;  
@@ -41,6 +42,10 @@ flex-direction: column;
     background-color: #328cc1;
 }
 
+#input{
+    width: 30%;
+    border-radius:8%;
+}
  #submit{
     width:10%;
     display: flex;
