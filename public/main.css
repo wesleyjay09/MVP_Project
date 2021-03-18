@@ -24,7 +24,7 @@
     flex-direction: column;
 }  
 #listContainer{
-position: relative;
+position:absolute;
 margin-left: 35%;
 width:20%;
 color: #fff;
@@ -36,8 +36,11 @@ flex-direction: column;
 }
 
 #task {
+    position:absolute;
+    margin: 50%;
     width: 40%;
     display: flex;
+    align-items: center;
     justify-content: center;
     border-radius: 8%;
     justify-content: space-between;
