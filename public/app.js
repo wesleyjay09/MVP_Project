@@ -16,7 +16,7 @@ const get = () => {
         for(let i = 0; i < text.length; i++) {
             let checkBox = $(`<input type="checkbox>`)
             let label = $(`<label for="${checkBox}">${text[i].id} ${text[i].task}</label><br><br></br>`)
-            label.append(checkBox).append(container)   
+            label.append(checkBox).append(body) 
         }
         console.log(container)
         
