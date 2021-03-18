@@ -4,6 +4,9 @@ const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
+let check = document.createElement("input")
+check.setRangeText("id" ,"checked")
+check.setAttribute("type", "checkbox");
 let userInput;
 
 
@@ -46,7 +49,8 @@ const post = () => {
 }
 
 const deleteTask = ()=> {
-    fetch('https://quiet-basin-82276.herokuapp.com/api/todo',{
+    if(document.getElementById("checked").checked = true) {
+        fetch('https://quiet-basin-82276.herokuapp.com/api/todo',{
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -54,6 +58,9 @@ const deleteTask = ()=> {
           body: JSON.stringify({'id': `${userInput}`})
     })
 }
+
+}
+
 
 
  
