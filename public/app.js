@@ -13,13 +13,14 @@ const get = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
         let text = await result.json();
-        // text.forEach(function (text) {
-        // var li = document.createElement('li');
-        // li.textContent = text;
-        // list.appendChild(li);
-   console.log(text[10].task)
-    
+        text.forEach(function (text) {
+        var li = document.createElement('li');
+        li.textContent = text;
+        list.appendChild(li);
+        })
+        
     })
+
 }
 
 const post = () => {
