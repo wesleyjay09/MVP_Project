@@ -59,13 +59,7 @@ const deleteTask = ()=> {
           
     })
     check.checked === false
-    
-
 }
-
-
-}
-
 }
 
 
