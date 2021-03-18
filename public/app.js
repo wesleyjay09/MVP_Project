@@ -25,6 +25,7 @@ const get = () => {
             task.setAttribute("id", "task")
             let check = document.createElement("input")
             check.setAttribute("type", "checkbox");
+            check.setAttribute("id",`${text[i].id}`)
        
             task.innerHTML = text[i].task
             task.appendChild(check); 
@@ -51,9 +52,10 @@ const post = () => {
 
 
 check.addEventListener("click", (e) =>{
+    console.log(e.target)
     deleteInput = e.target.id
      deleteTask()
-     console.log(e.target)
+     
  })
 const deleteTask = ()=> {
     
@@ -62,7 +64,6 @@ const deleteTask = ()=> {
         headers: {
             'Content-Type': 'application/json'
           }
-          
           
     })
     
