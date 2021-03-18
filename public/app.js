@@ -58,7 +58,7 @@ const deleteTask = ()=> {
  
 
 
-submit.addEventListener("click", post)
+submit.addEventListener("click", post, get)
 input.addEventListener("input", (e) => {userInput = e.target.value})
 button.addEventListener("click", get)
 deleteBtn.addEventListener("click", deleteTask)

@@ -16,8 +16,9 @@
 }
 
 #container{
+    width:20wh;
     color: #fff;
-    background-color: #5995DA;  /* Blue */
+    background-color: #5995DA;  
     padding: 20px 0;
     display: flex;
     justify-content: center;
@@ -26,7 +27,7 @@
 #listContainer{
 width:20wh;
 color: #fff;
-background-color: #3bad78;  /* Blue */
+background-color: #3bad78;  
 padding: 20px 0;
 display: flex;
 justify-content: center;
@@ -36,7 +37,7 @@ flex-direction: column;
 #task {
     display: flex;
     justify-content: center;
-    border: 1px black solid;
+    border-radius: 8% white solid;
 }
 
 #submit{
