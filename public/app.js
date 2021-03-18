@@ -5,7 +5,7 @@ const submit = document.querySelector("#submit")
 const button = document.getElementById("button")
 const deleteBtn = document.getElementById("delete")
 let check = document.createElement("input")
-check.setRangeText("id" ,"checked")
+check.setAttribute("id" ,"checked")
 check.setAttribute("type", "checkbox");
 let userInput;
 
