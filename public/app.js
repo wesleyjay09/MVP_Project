@@ -14,7 +14,7 @@ const get = () => {
     .then(async(result)=> {
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
-            let task = document.createElement("li")
+            let task = document.createElement("div")
             task.innerHTML = text[i].task
             document.body.appendChild(task)     
 
