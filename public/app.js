@@ -3,6 +3,7 @@ const listContainer = document.getElementById("listContainer")
 const input = document.getElementById("input");
 const submit = document.querySelector("#submit")
 const button = document.getElementById("button")
+const update = document.getElementById("update")
 const deleteBtn = document.getElementById("delete")
 let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
@@ -29,8 +30,8 @@ const get = () => {
                 })
        
             task.innerHTML = text[i].task
-            task.appendChild(check); 
-            listContainer.appendChild(task)
+            check.appendChild(task); 
+            listContainer.appendChild(check)
         }
     })
 }
@@ -70,7 +71,7 @@ const put = () => {
 
  
 
-
+submit.addEventListener("click", put)
 submit.addEventListener("click", post)
 submit.addEventListener("click", get)
 input.addEventListener("input", (e) => {userInput = e.target.value})
