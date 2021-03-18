@@ -60,16 +60,9 @@ flex-direction: column;
     
 } 
 
-#update{
-    width:3%;
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    font-family: 'Syne Mono', monospace;
-    border-radius: 5%;
-} 
 
-input{
+
+.input{
     float:left;
 }
 
