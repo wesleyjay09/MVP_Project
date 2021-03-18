@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+  }
 
 
 
@@ -15,11 +16,12 @@
 }
 
 #container{
-    position:absolute;
-    width: 50%;
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
 }
 
 #task {
