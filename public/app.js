@@ -26,11 +26,15 @@ const get = () => {
             let check = document.createElement("input")
             check.setAttribute("type", "checkbox");
             check.setAttribute("id",`${text[i].id}`)
+            check.addEventListener("click", (e) =>{
+                console.log(e.target)
+                deleteInput = e.target.id
+                deleteTask()
+                })
        
             task.innerHTML = text[i].task
             task.appendChild(check); 
             listContainer.appendChild(task)
-            
         }
         
         
@@ -51,12 +55,7 @@ const post = () => {
 }
 
 
-check.addEventListener("click", (e) =>{
-    console.log(e.target)
-    deleteInput = e.target.id
-     deleteTask()
-     
- })
+
 const deleteTask = ()=> {
     
         fetch(`https://quiet-basin-82276.herokuapp.com/api/todo/:${input}`,{
