@@ -12,8 +12,9 @@
     justify-content: center;
     font-size: 91px;
 }
-/* 
+ 
 #container{
+    margin-left: 35%;
     width:50%;
     color: #fff;
     background-color: #0b3c5d;  
@@ -21,10 +22,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-}  */
+}  
 #listContainer{
 position: relative;
-margin-left: 50%;
+margin-left: 35%;
 width:40%;
 color: #fff;
 background-color: #d98310;  
