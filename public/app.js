@@ -27,7 +27,7 @@ const get = () => {
             check.setAttribute("type", "checkbox");
             check.setAttribute("id",`${text[i].id}`)
             check.addEventListener("click", (e) =>{
-                console.log(e.target)
+                console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
