@@ -13,16 +13,16 @@ let userInput;
 const get = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
-        console.log(result)
+        listContainer.replaceChild()
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
             let task = document.createElement("div")
             task.setAttribute("id", "task")
             let check = document.createElement("input")
             check.setAttribute("type", "checkbox");
-            task.innerHTML = text[i].id
-            task.innerHTML = text[i].task
-            check.appendChild(task); 
+       
+            task.innerHTML = text[i].id.task
+            task.appendChild(check); 
             listContainer.appendChild(check)
             console.log(text)
         }
