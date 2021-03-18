@@ -13,7 +13,7 @@ let userInput;
 const get = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
     .then(async(result)=> {
-        result.remove()
+        console.log(result)
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
             let task = document.createElement("div")
