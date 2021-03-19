@@ -38,7 +38,7 @@
 
 
 
-.task {
+.todo {
     
         background: #ae5f75;
         height: 69px;
@@ -60,7 +60,7 @@
         -webkit-box-sizing: border-box;
       
 }
- .task:before{
+ .todo:before{
     content:"";
     width: 20px;
     height: 20px;

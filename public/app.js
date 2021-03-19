@@ -21,23 +21,20 @@ const get = () => {
             listContainer.removeChild(listContainer.firstChild)};
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
-           
-            let task = document.createElement("ul")
-            task.setAttribute("class", "task")
-            task.setAttribute("id",`${text[i].id}`)
-            let listItem = document.createElement("li")
-            listItem.addEventListener("click", (e) =>{
+           let todo = document.createElement("div")
+           todo.setAttribute("id", `${text[i].id}`)
+           todo.setAttribute("class","todo")
+           let check = document.createElement("input")
+           check.setAttribute("type", "checkbox")
+           check.setAttribute("id","check")
+          
+            todo.addEventListener("click", (e) =>{
                 console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
         listItem.innerHTML = text[i].task
-
-        listContainer.appendChild(task).appendChild(listItem)
- 
-             
-
-            
+        listContainer.appendChild(check).appendChild(todo)
         }
     })
 }
