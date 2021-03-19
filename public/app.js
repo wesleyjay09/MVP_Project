@@ -9,8 +9,6 @@ const ul = document.getElementById("ul")
 let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
 
-
-
 check.setAttribute("type", "checkbox");
 let userInput;
 let deleteInput;
@@ -21,26 +19,28 @@ const get = () => {
         while (listContainer.firstChild) {
             listContainer.removeChild(listContainer.firstChild)};
         let text = await result.json();
-        
-        text.forEach((element, index) => {
-            newLiTag += `<li>${text.task}<span class="icon" onclick="deleteTask(${text.id})"><i class="fas fa-trash"></i></span></li>`;
-          });
-          todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
-          input.value = ""; //once task added leave the input field blank
-        
+        for(let i = 0; i < text.length; i++) {
+            let li = document.createElement("li")
+            let task = document.createElement("label")
+            task.setAttribute("id", "task")
+            let check = document.createElement("input")
+            check.setAttribute("type", "checkbox");
+            check.setAttribute("id",`${text[i].id}`)
+            check.setAttribute("class","input")
+            let span = document.createElement("span")
             check.addEventListener("click", (e) =>{
                 console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
-            
+        task.innerHTML = text[i].task
  
-            }) 
-        } 
+             
+            listContainer.appendChild(ul).appendChild(li).appendChild(task).appendChild(check).appendChild(span)
             
-        
-    
-
+        }
+    })
+}
 
 
 
