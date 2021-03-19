@@ -8,6 +8,7 @@ const deleteBtn = document.getElementById("delete")
 const ul = document.getElementById("ul")
 let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
+
 check.setAttribute("type", "checkbox");
 let userInput;
 let deleteInput;
@@ -36,7 +37,7 @@ const get = () => {
        
             paragraph.innerHTML = text[i].task
              
-            ul.appendChild(li).appendChild(task).append(check).append(paragraph).append(span)
+            listContainer.appendChild(li).appendChild(task).append(check).append(paragraph).append(span)
             
         }
     })
