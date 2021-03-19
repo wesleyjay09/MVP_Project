@@ -5,7 +5,7 @@ const submit = document.querySelector("#submit")
 const button = document.getElementById("button")
 const update = document.getElementById("update")
 const deleteBtn = document.getElementById("delete")
-const deleteBtn = document.getElementById("empty")
+const empty = document.getElementById("empty")
 const ul = document.getElementById("ul")
 let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
@@ -22,7 +22,7 @@ const get = () => {
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
            
-            let task = document.createElement("div")
+            let task = document.createElement("label")
             task.setAttribute("id", "task")
             let check = document.createElement("input")
             check.setAttribute("type", "checkbox");
