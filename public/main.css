@@ -40,6 +40,14 @@ body {
     font-family: 'Poppins', sans-serif;
 
 }
+.login{
+    padding: 0.5rem;
+    font-size:2rem;
+    border:none;
+    background: rgb(243, 239, 239);
+    font-family: 'Poppins', sans-serif;
+    
+}
 .checkbox.larger{
     width:2rem;
     height: 2rem;
