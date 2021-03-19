@@ -40,7 +40,7 @@ const get = () => {
             completedButton.classList.add("completed-btn")
             todoDiv.appendChild(completedButton)
             const trashButton = document.createElement('button');
-            tashButton.innerHTML = '<i class="fas fa-trash"></i>';
+            trashButton.innerHTML = '<i class="fas fa-trash"></i>';
             trashButton.classList.add("trash-btn")
             todoDiv.appendChild(trashButton)
             todoList.appendChild(todoDiv)
