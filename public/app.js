@@ -28,6 +28,7 @@ const get = () => {
             check.setAttribute("id",`${text[i].id}`)
             check.setAttribute("class","input")
             let paragraph = document.createElement("p")
+            let textNode = document.createTextNode(`${text[i].task}`)
             let span = document.createElement("span")
             check.addEventListener("click", (e) =>{
                 console.log(e.target.id)
@@ -35,9 +36,9 @@ const get = () => {
                 deleteTask()
                 })
        
-            paragraph.innerHTML = text[i].task
+ 
              
-            listContainer.appendChild(ul).appendChild(li).appendChild(task).appendChild(check).appendChild(paragraph).appendChild(span)
+            listContainer.appendChild(ul).appendChild(li).appendChild(task).appendChild(check).appendChild(paragraph).appendChild(textNode).appendChild(span)
             
         }
     })
