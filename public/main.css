@@ -32,8 +32,18 @@ justify-content: center;
 align-items: center;
 background-color: #d98310;   
 }
-  
 
+#todo{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;  
+}
+#todo:nth-child(odd) {
+    background: #f9f9f9;
+  }
 
 
 
