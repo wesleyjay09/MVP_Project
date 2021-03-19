@@ -68,7 +68,7 @@ const put = () => {
 
 
 
-todoButton.addEventListener('click', get)
+
 empty.addEventListener("click", get)
 //submit.addEventListener("click", put)
 submit.addEventListener("click", post)
