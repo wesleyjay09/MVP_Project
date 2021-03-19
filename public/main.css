@@ -1,8 +1,17 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+
+  }
+
+  
 
 
 
@@ -13,7 +22,7 @@
     font-size: 91px;
 }
  
-#container{
+/* #container{
     margin-left: 35%;
     width:20%;
     color: #fff;
@@ -22,18 +31,68 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-}  
+}   */
 #listContainer{
+    position: relative;
+    background: #fff;
+    width: 350px;
+}  
 
-margin-left: 35%;
-width:20%;
-color: #fff;
-background-color: #d98310;  
-padding: 20px 0;
-display: flex;
-justify-content: center;
-flex-direction: column;
+#listContainer ul {
+    position: relative;
+    padding:20px;
 }
+#listContainer ul li {
+    position: relative;
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba (0,0,0,0.1);
+
+}
+#listContainer ul li:last-child {
+    border-bottom: none;
+}
+#listContainer ul li label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+#listContainer ul li label input {
+    visibility: hidden;
+    appearance: none;
+}
+#listContainer ul li label p {
+    position: absolute;
+}
+
+#listContainer ul li label span {
+    position: relative;
+    width: 20px;
+    height:20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center ;
+    align-items: center;
+}
+#listContainer ul li label span::before {
+    content: '';
+    position: absolute;
+    top:5px;
+    width:10px;
+    height:5px;
+    border-left: 2px solid;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-45deg);
+}
+#listContainer ul li label input:checked ~ p {
+    text-decoration: line-through;
+}
+
 
 #task {
     
