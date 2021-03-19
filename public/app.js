@@ -5,6 +5,7 @@ const submit = document.querySelector("#submit")
 const button = document.getElementById("button")
 const update = document.getElementById("update")
 const deleteBtn = document.getElementById("delete")
+const deleteBtn = document.getElementById("empty")
 const ul = document.getElementById("ul")
 let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
@@ -77,7 +78,7 @@ const put = () => {
 
 
  
-
+empty.addEventListener("click", get)
 submit.addEventListener("click", put)
 submit.addEventListener("click", post)
 submit.addEventListener("click", get)
