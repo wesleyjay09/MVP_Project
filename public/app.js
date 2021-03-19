@@ -73,13 +73,13 @@ const footer = document.querySelector("#quote")
 const quotes =  () => {
     fetch("https://type.fit/api/quotes")
     .then(async(result)=> {
- quote =  await result.json();
- const inspo = document.createElement("div")
- const author = document.createElement("div")
- inspo.innerHTML = quote[Math.floor(Math.random() * quote.length)].text
- author.innerHTML = quote[Math.floor(Math.random() * quote.length)].author
+    quote =  await result.json();
+    const inspo = document.createElement("div")
+    const author = document.createElement("div")
+    inspo.innerHTML = quote[Math.floor(Math.random() * quote.length)].text
+    author.innerHTML = quote[Math.floor(Math.random() * quote.length)].author
  
- footer.appendChild(inspo)
+ footer.appendChild(inspo).appendChild(author)
 
 })
 
