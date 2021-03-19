@@ -60,7 +60,7 @@
         -webkit-box-sizing: border-box;
       
 }
-#task:before{
+/* #task:before{
     content:"";
     width: 20px;
     height: 20px;
@@ -71,7 +71,7 @@
     right: 20px;
     top: 30%;
     transition: border 0.7s ease
-  }
+  } */
 
 /* #input{
     width: 30%;

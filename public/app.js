@@ -24,7 +24,9 @@ const get = () => {
            
             let task = document.createElement("label")
             task.setAttribute("id", "task")
-        
+            
+            task.setAttribute("id",`${text[i].id}`)
+            
             task.addEventListener("click", (e) =>{
                 console.log(e.target.id)
                 deleteInput = e.target.id
