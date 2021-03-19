@@ -10,7 +10,7 @@ const todoList = document.querySelector(".todo-List")
 // const deleteBtn = document.getElementById("delete")
 // const empty = document.getElementById("empty")
 
-todoButton.addEventListener('click', post)
+
 let userInput;
 let deleteInput;
 
@@ -77,7 +77,7 @@ const put = () => {
 
 
 
- 
+todoButton.addEventListener('click', get)
 empty.addEventListener("click", get)
 //submit.addEventListener("click", put)
 submit.addEventListener("click", post)
