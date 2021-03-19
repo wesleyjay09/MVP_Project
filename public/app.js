@@ -5,6 +5,7 @@ const submit = document.querySelector("#submit")
 const button = document.getElementById("button")
 const update = document.getElementById("update")
 const deleteBtn = document.getElementById("delete")
+const ul = document.getElementById("ul")
 let check = document.createElement("input")
 check.setAttribute("id" ,"checked")
 check.setAttribute("type", "checkbox");
@@ -35,7 +36,7 @@ const get = () => {
        
             paragraph.innerHTML = text[i].task
              
-            listContainer.append(li).appendChild(task).append(check).append(paragraph).append(span)
+            ul.append(li).appendChild(task).append(check).append(paragraph).append(span)
             
         }
     })
