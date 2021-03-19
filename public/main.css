@@ -25,9 +25,10 @@ background-color: #328cc1;
 
 }
 .list {
-width:30%;
+width:10%;
 position: relative;
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 background-color: #d98310;   
