@@ -1,6 +1,4 @@
-const todoInput = document.querySelector(".todo-input")
-const todoButton = document.querySelector(".todo-button")
-const todoList = document.querySelector(".todo-List")
+
 
 const listContainer = document.getElementById("listContainer")
 const input = document.getElementById("input");
