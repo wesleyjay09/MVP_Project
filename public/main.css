@@ -19,11 +19,11 @@ body {
 
 
 .list {
-    display: flex;
+    display: flex; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    width: 30%;
 }
 
 .todo-list{
