@@ -76,8 +76,8 @@ const quotes =  () => {
  quote =  await result.json();
  const inspo = document.createElement("div")
  const author = document.createElement("div")
- inspo.innerHTML = quote[Math.floor(Math.random() * arr.length)].text
- author.innerHTML = quote[Math.floor(Math.random() * arr.length)].author
+ inspo.innerHTML = quote[Math.floor(Math.random() * quote.length)].text
+ author.innerHTML = quote[Math.floor(Math.random() * quote.length)].author
  
  footer.appendChild(inspo)
 
