@@ -6,11 +6,8 @@ const button = document.getElementById("button")
 const update = document.getElementById("update")
 const deleteBtn = document.getElementById("delete")
 const empty = document.getElementById("empty")
-const ul = document.getElementById("ul")
-let check = document.createElement("input")
-check.setAttribute("id" ,"checked")
 
-check.setAttribute("type", "checkbox");
+
 let userInput;
 let deleteInput;
 
@@ -22,11 +19,11 @@ const get = () => {
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
            let todo = document.createElement("div")
-           todo.setAttribute("id", `${text[i].id}`)
            todo.setAttribute("class","todo")
            let check = document.createElement("input")
-           check.setAttribute("type", "checkbox")
-           check.setAttribute("id","check")
+            check.setAttribute("type", "checkbox");
+            check.setAttribute("id",`${text[i].id}`)
+            check.setAttribute("class","input")
           
             todo.addEventListener("click", (e) =>{
                 console.log(e.target.id)
