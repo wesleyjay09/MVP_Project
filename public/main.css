@@ -65,9 +65,7 @@
     visibility: hidden;
     appearance: none;
 }
-#listContainer ul li label p {
-    position: absolute;
-}
+
 
 #listContainer ul li label span {
     position: relative;
@@ -108,7 +106,7 @@
     background-color: #328cc1;
 }
 
-#input{
+/* #input{
     width: 30%;
     border-radius:8% 8%;
 }
@@ -133,8 +131,4 @@
 
 
 
-.input{
-    
-}
-
-  */
+ */
