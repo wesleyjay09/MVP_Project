@@ -28,6 +28,7 @@ const get = () => {
            todo.setAttribute("class","todo")
            let check = document.createElement("input")
            check.setAttribute("type", "checkbox")
+           check.setAttribute("class", "checkbox")
            check.setAttribute("id", `${text[i].id}`)
           
             todo.addEventListener("click", (e) =>{

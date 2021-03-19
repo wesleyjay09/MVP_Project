@@ -48,15 +48,9 @@ body {
     background: white;
 
 }
-input.larger{
+.checkbox.larger{
     margin: 0.5rem;
-    background:white;
-    color:black;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    flex:1;
+    
 }
 .button {
     padding: 0.5rem;
