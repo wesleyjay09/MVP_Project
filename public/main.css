@@ -1,11 +1,22 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+  header{
+    font-family: 'Cutive Mono', monospace;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
 body {
     
     background-image: radial-gradient(#0b3c5d, #328cc1);
