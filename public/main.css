@@ -27,8 +27,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
-    border-radius:  5% 5%;
+    width: 30%;
+    border-radius:  5% 5% 5% 5%;
     background: #d98310;
 }
 
@@ -37,6 +37,7 @@ body {
     font-size:2rem;
     border:none;
     background: rgb(243, 239, 239);
+    font-family: 'Poppins', sans-serif;
 
 }
 .checkbox.larger{
@@ -59,6 +60,8 @@ body {
 }
 
 #task {
+    height: 28%;
+    width:8%;
     margin: 0.5rem;
     background:white;
     color:black;
