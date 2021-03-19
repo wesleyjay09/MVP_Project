@@ -34,7 +34,7 @@ const get = () => {
                 deleteTask()
                 })
         todo.innerHTML = text[i].task
-        listContainer.appendChild(check).appendChild(todo)
+        listContainer.appendChild(todo).appendChild(check)
         }
     })
 }
