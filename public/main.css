@@ -4,6 +4,7 @@
     box-sizing: border-box;
   }
   body {
+      
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -13,7 +14,8 @@
       background-color: #0b3c5d;
 
   }
-#container {    
+#container { 
+width:50%;   
 position: relative;
 display: flex;
 flex-wrap: wrap;
@@ -23,6 +25,7 @@ background-color: #328cc1;
 
 }
 .list {
+width:50%;
 position: relative;
 display: flex;
 justify-content: center;
