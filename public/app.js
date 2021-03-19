@@ -23,7 +23,7 @@ const get = () => {
         for(let i = 0; i < text.length; i++) {
            
             let task = document.createElement("label")
-            task.setAttribute("id", "task")
+            task.setAttribute("class", "task")
             
             task.setAttribute("id",`${text[i].id}`)
             
