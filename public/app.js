@@ -7,7 +7,7 @@ const button = document.getElementById("button")
 const update = document.getElementById("update")
 const deleteBtn = document.getElementById("delete")
 const empty = document.getElementById("empty")
-const todoList = document.getElementByClass("todo-list")
+const todoList = document.querySelector(".todo-list")
 
 
 let userInput;
