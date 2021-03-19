@@ -31,12 +31,12 @@
 
 .list ul {
     position: relative;
-    padding:20px;
+    padding:5px;
 }
 list ul li {
     position: relative;
     list-style: none;
-    padding: 15px 0;
+    padding: 5px 0;
     border-bottom: 1px solid rgba (0,0,0,0.1);
 
 }
@@ -52,10 +52,7 @@ list ul li {
 
 }
 
-.list ul li label input {
-    visibility: hidden;
-    appearance: none;
-}
+
 
 
 .list ul li label span {
