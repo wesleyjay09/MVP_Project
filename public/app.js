@@ -33,7 +33,7 @@ const get = () => {
                 deleteInput = e.target.id
                 deleteTask()
                 })
-        check.innerHTML = text[i].task
+        task.innerHTML = text[i].task
  
              
             listContainer.appendChild(ul).appendChild(li).appendChild(task).appendChild(check).appendChild(span)
