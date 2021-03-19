@@ -69,13 +69,14 @@ const put = () => {
        })
 
 }
-
+const footer = document.querySelector("#quote")
 const quotes =  () => {
     fetch("https://type.fit/api/quotes")
     .then(async(result)=> {
  quote =  await result.json();
  const inspo = document.createElement("div")
  inspo.innerHTML = quote[1].text
+ footer.appendChild(inspo)
 
 })
 
