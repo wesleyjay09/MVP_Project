@@ -69,6 +69,8 @@ const put = () => {
        })
 
 }
+
+
 //modal variables
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("myBtn");

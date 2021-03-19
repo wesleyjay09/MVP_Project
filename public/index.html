@@ -12,7 +12,18 @@
 </head>
 <header>Get It Done</header>
 <body>
-    
+    <script>
+        function quotes() {
+            fetch("https://type.fit/api/quotes")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data);
+  });
+          
+        }
+        </script>
     <div id="myModal" class="modal">
 
         
