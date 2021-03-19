@@ -31,30 +31,22 @@ const get = () => {
         //     listContainer.removeChild(listContainer.firstChild)};
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
-            const todoDiv = document.createElement('div')
-            const newTodo = document.createElement('li')
-            newTodo.innerHTML = text [i].task
-            todoDiv.appendChild(newTodo);
-            const completedButton = document.createElement('button');
-            completedButton.innerHTML = '<i class="fas fa-check"></i>';
-            completedButton.classList.add("completed-btn")
-            todoDiv.appendChild(completedButton)
-            const trashButton = document.createElement('button');
-            trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-            trashButton.classList.add("trash-btn")
-            todoDiv.appendChild(trashButton)
-            
-          
-            trashButton.addEventListener("click", (e) =>{
+            let todo = document.createElement("li")
+            todo.setAttribute("class","todo")
+            let check = document.createElement("button")
+            check.setAttribute("type", "submit");
+            check.setAttribute("id",`${text[i].id}`)
+            check.setAttribute("class","input")
+            check.addEventListener("click", (e) =>{
                 console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
-                todoList.appendChild(todoDiv)
+                
         
         
         }
-        todoInput.value = "";
+      
     })
 }
 
