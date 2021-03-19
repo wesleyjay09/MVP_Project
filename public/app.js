@@ -1,42 +1,18 @@
+const todoInput = document.querySelector(".todo-input")
+const todoButton = document.querySelector(".todo-button")
+const todoList = document.querySelector(".todo-List")
 
-const listContainer = document.getElementById("listContainer")
-const input = document.getElementById("input");
-const submit = document.querySelector("#submit")
-const button = document.getElementById("button")
-const update = document.getElementById("update")
-const deleteBtn = document.getElementById("delete")
-const empty = document.getElementById("empty")
+// const listContainer = document.getElementById("listContainer")
+// const input = document.getElementById("input");
+// const submit = document.querySelector("#submit")
+// const button = document.getElementById("button")
+// const update = document.getElementById("update")
+// const deleteBtn = document.getElementById("delete")
+// const empty = document.getElementById("empty")
 
-
+todoButton.addEventListener('click', post)
 let userInput;
 let deleteInput;
-
-const get = () => {
-    fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
-    .then(async(result)=> {
-        while (listContainer.firstChild) {
-            listContainer.removeChild(listContainer.firstChild)};
-        let text = await result.json();
-        for(let i = 0; i < text.length; i++) {
-           let todo = document.createElement("div")
-           todo.setAttribute("class","todo")
-           let check = document.createElement("input")
-            check.setAttribute("type", "checkbox");
-            check.setAttribute("id",`${text[i].id}`)
-            check.setAttribute("class","input")
-          
-            todo.addEventListener("click", (e) =>{
-                console.log(e.target.id)
-                deleteInput = e.target.id
-                deleteTask()
-                })
-        todo.innerHTML = text[i].task
-        listContainer.appendChild(todo).appendChild(check)
-        }
-    })
-}
-
-
 
 const post = () => {
     fetch('https://quiet-basin-82276.herokuapp.com/api/todo', {
@@ -46,6 +22,38 @@ const post = () => {
     })
     .then(async (result) => {
         let text = await result.text()
+    })
+}
+const get = () => {
+    fetch('https://quiet-basin-82276.herokuapp.com/api/todo')
+    .then(async(result)=> {
+        // while (listContainer.firstChild) {
+        //     listContainer.removeChild(listContainer.firstChild)};
+        let text = await result.json();
+        for(let i = 0; i < text.length; i++) {
+            const todoDiv = document.createElement('div')
+            const newTodo = document.createElement('li')
+            newTodo.innerHTML = text [i].task
+            todoDiv.appendChild(newTodo);
+            const completedButton = document.createElement('button');
+            completedButton.innerHTML = '<i class="fas fa-check"></i>';
+            completedButton.classList.add("completed-btn")
+            todoDiv.appendChild(completedButton)
+            const trashButton = document.createElement('button');
+            tashButton.innerHTML = '<i class="fas fa-trash"></i>';
+            trashButton.classList.add("trash-btn")
+            todoDiv.appendChild(trashButton)
+            todoList.appendChild(todoDiv)
+          
+            trashButton.addEventListener("click", (e) =>{
+                console.log(e.target.id)
+                deleteInput = e.target.id
+                deleteTask()
+                })
+        
+        
+        }
+        todoInput.value = "";
     })
 }
 
@@ -74,7 +82,7 @@ empty.addEventListener("click", get)
 //submit.addEventListener("click", put)
 submit.addEventListener("click", post)
 submit.addEventListener("click", get)
-input.addEventListener("input", (e) => {userInput = e.target.value})
+todoInput.addEventListener("input", (e) => {userInput = e.target.value})
 button.addEventListener("click", get)
 //deleteBtn.addEventListener("click", deleteTask)
 //deleteBtn.addEventListener("click", get)

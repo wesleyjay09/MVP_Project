@@ -13,13 +13,17 @@
 <body>
     
     
-<div id="containter">
+<form>
+    <input type="text" class="todo-input"/>
+    <button class="todo-button" type="submit"></button>
+</form>
     <input id="input" type="text" placeholder="Insert Task ">
     <button id="submit">Create Task</button>
     <button id="button">Get List</button> 
     <button id="empty">Empty Checked</button>
-</div>
-    <div class="list" id="listContainer" >
+
+    <div class="listContainer" >
+        <ul class="todo-list"></ul>
     </div>
     <script src='app.js'></script>
     
