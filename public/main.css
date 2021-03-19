@@ -17,14 +17,8 @@ body {
     align-items: center;
 }
 
-
-
-
-.todo-list{
-    list-style: none;
-    min-width: 30%;
-}
 .list {
+    margin-left: 35%;
     min-height: 20vh;
     display: flex;
     justify-content: center;
@@ -37,7 +31,7 @@ body {
     padding: 0.5rem;
     font-size:2rem;
     border:none;
-    background: rgb(218, 212, 212);
+    background: rgb(243, 239, 239);
 
 }
 .checkbox.larger{
@@ -49,7 +43,8 @@ body {
     padding: 0.5rem;
     font-size:2rem;
     border:none;
-    background: white;
+    color: whitesmoke;
+    background: #1d2731;
 }
 
 .button:hover{
