@@ -37,7 +37,7 @@ const get = () => {
        
             paragraph.innerHTML = text[i].task
              
-            listContainer.appendChild(li).appendChild(task).append(check).append(paragraph).append(span)
+            ul.appendChild(li).appendChild(task).appendChil(check).appendChild(paragraph).appendChild(span)
             
         }
     })
