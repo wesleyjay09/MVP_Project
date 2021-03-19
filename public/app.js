@@ -24,18 +24,15 @@ const get = () => {
            
             let task = document.createElement("label")
             task.setAttribute("id", "task")
-            let check = document.createElement("input")
-            check.setAttribute("type", "checkbox");
-            check.setAttribute("id",`${text[i].id}`)
-            check.setAttribute("class","input")
-            check.addEventListener("click", (e) =>{
+        
+            task.addEventListener("click", (e) =>{
                 console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
         task.innerHTML = text[i].task
 
-        listContainer.appendChild(task).appendChild(check)
+        listContainer.appendChild(task)
  
              
 

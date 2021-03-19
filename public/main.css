@@ -60,6 +60,18 @@
         -webkit-box-sizing: border-box;
       
 }
+#task:before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    right: 20px;
+    top: 30%;
+    transition: border 0.7s ease
+  }
 
 /* #input{
     width: 30%;
