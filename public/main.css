@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,7 @@ body {
     min-height: 100vh;
 }
 .form{
+    font-family: 'Poppins', sans-serif;
     min-height: 20vh;
     display: flex;
     justify-content: center;
@@ -21,9 +24,10 @@ body {
     margin-left: 35%;
     min-height: 20vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 20%;
     border-radius:  5% 5%;
 }
 
@@ -45,6 +49,7 @@ body {
     border:none;
     color: whitesmoke;
     background: #1d2731;
+    font-family: 'Poppins', sans-serif;
 }
 
 .button:hover{
@@ -60,6 +65,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center ;
+    font-family: 'Poppins', sans-serif;
     
 
 
