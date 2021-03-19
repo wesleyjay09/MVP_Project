@@ -22,19 +22,18 @@ const get = () => {
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
            
-            let task = document.createElement("label")
+            let task = document.createElement("ul")
             task.setAttribute("class", "task")
-            
             task.setAttribute("id",`${text[i].id}`)
-            
-            task.addEventListener("click", (e) =>{
+            let listItem = document.createElement("li")
+            listItem.addEventListener("click", (e) =>{
                 console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
-        task.innerHTML = text[i].task
+        listItem.innerHTML = text[i].task
 
-        listContainer.appendChild(task)
+        listContainer.appendChild(task).appendChild(listItem)
  
              
 
@@ -78,10 +77,10 @@ const put = () => {
 
  
 empty.addEventListener("click", get)
-submit.addEventListener("click", put)
+//submit.addEventListener("click", put)
 submit.addEventListener("click", post)
 submit.addEventListener("click", get)
 input.addEventListener("input", (e) => {userInput = e.target.value})
 button.addEventListener("click", get)
-deleteBtn.addEventListener("click", deleteTask)
-deleteBtn.addEventListener("click", get)
+//deleteBtn.addEventListener("click", deleteTask)
+//deleteBtn.addEventListener("click", get)
