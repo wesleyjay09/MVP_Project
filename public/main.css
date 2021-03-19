@@ -54,9 +54,14 @@ body {
 }
 
 #task {
+    margin: 0.5rem;
+    background:white;
+    color:black;
+    font-size: 1.5rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    justify-content: space-between;
+    align-items: center ;
+    flex:1;
+
 
 }
