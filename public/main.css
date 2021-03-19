@@ -10,7 +10,12 @@ body {
     font-family: "";
     min-height: 100vh;
 }
-
+form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .list {
