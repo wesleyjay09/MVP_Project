@@ -30,7 +30,7 @@ const get = () => {
         //     listContainer.removeChild(listContainer.firstChild)};
         let text = await result.json();
         for(let i = 0; i < text.length; i++) {
-            let todo = document.createElement("li")
+            let todo = document.createElement("div")
             todo.setAttribute("class","todo")
             let check = document.createElement("button")
             check.setAttribute("type", "submit");
