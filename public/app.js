@@ -7,6 +7,7 @@ const button = document.getElementById("button")
 const update = document.getElementById("update")
 const deleteBtn = document.getElementById("delete")
 const empty = document.getElementById("empty")
+const todoList = document.getElementByClass("todo-list")
 
 
 let userInput;
@@ -36,10 +37,12 @@ const get = () => {
             check.setAttribute("id",`${text[i].id}`)
             check.setAttribute("class","input")
             check.addEventListener("click", (e) =>{
+                todo.appendChild(check)
                 console.log(e.target.id)
                 deleteInput = e.target.id
                 deleteTask()
                 })
+                todoList.appendChild(todo)
                 
         
         
