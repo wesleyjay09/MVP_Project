@@ -2,13 +2,13 @@ const todoInput = document.querySelector(".todo-input")
 const todoButton = document.querySelector(".todo-button")
 const todoList = document.querySelector(".todo-List")
 
-// const listContainer = document.getElementById("listContainer")
-// const input = document.getElementById("input");
-// const submit = document.querySelector("#submit")
-// const button = document.getElementById("button")
-// const update = document.getElementById("update")
-// const deleteBtn = document.getElementById("delete")
-// const empty = document.getElementById("empty")
+const listContainer = document.getElementById("listContainer")
+const input = document.getElementById("input");
+const submit = document.querySelector("#submit")
+const button = document.getElementById("button")
+const update = document.getElementById("update")
+const deleteBtn = document.getElementById("delete")
+const empty = document.getElementById("empty")
 
 
 let userInput;
