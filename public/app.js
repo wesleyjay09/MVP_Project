@@ -37,7 +37,7 @@ const get = () => {
        
             paragraph.innerHTML = text[i].task
              
-            ul.appendChild(li).appendChild(task).appendChil(check).appendChild(paragraph).appendChild(span)
+            ul.appendChild(li).appendChild(task).appendChild(check).appendChild(paragraph).appendChild(span)
             
         }
     })
