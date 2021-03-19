@@ -70,7 +70,17 @@ const put = () => {
 
 }
 
+const quotes =  () => {
+    fetch("https://type.fit/api/quotes")
+    .then(async(result)=> {
+ quote =  await result.json();
+ const inspo = document.createElement("div")
+ inspo.innerHTML = quote[1].text
 
+})
+
+  
+}
 //modal variables
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("myBtn");
@@ -94,5 +104,6 @@ submit.addEventListener("click", post)
 submit.addEventListener("click", get)
 input.addEventListener("input", (e) => {userInput = e.target.value})
 button.addEventListener("click", get)
+button.addEventListener("click", quotes)
 //deleteBtn.addEventListener("click", deleteTask)
 //deleteBtn.addEventListener("click", get)
