@@ -19,6 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 2px;
 }
 
 .list {
@@ -28,8 +29,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width:25%;
     background: #d98310;
+    border-radius: 2px;
 }
 
 #input {
@@ -80,6 +82,7 @@ body {
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: 700;
     
 
 
