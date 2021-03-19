@@ -10,7 +10,7 @@ body {
     font-family: "";
     min-height: 100vh;
 }
-form{
+.form{
     min-height: 20vh;
     display: flex;
     justify-content: center;
