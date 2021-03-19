@@ -18,34 +18,26 @@ body {
 }
 
 
-.list {
-   
-}
+
 
 .todo-list{
     list-style: none;
     min-width: 30%;
 }
 .list {
-    margin:0.5rem;
-    background: white;
-    color:black;
-    font-size: 1.5rem;
+    min-height: 20vh;
     display: flex;
-    justify-content: space-between;
-    position: absolute;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 30%;
-    border-radius: 10%;
+    border-radius:  5% 5%;
 }
 
 #input {
     padding: 0.5rem;
     font-size:2rem;
     border:none;
-    background: white;
+    background: rgb(218, 212, 212);
 
 }
 .checkbox.larger{
